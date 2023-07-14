@@ -37,7 +37,7 @@ systemctl enable docker
 
 # todo 20230714 - 这里将原来的镜像改名字为另外一个，因为原来镜像已经找不到了， 新的：https://hub.docker.com/r/2524931333/centos7ssh
 # docker pull 2524931333/centos7xjm:ssh
-docker pull 2524931333/centos7ssh
+docker pull 2524931333/centos7ssh:v2
 
 docker run -v /opt:/opt -v /var/lib/mysql/:/var/lib/mysql/ -v /sign:/sign  -p 8080:8080 -p 3306:3306 -p 8888:8888 -tdi --privileged --name sign -d --restart always 2524931333/centos7xjm:ssh init -t
 
